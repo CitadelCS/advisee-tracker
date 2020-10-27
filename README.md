@@ -1,1 +1,1 @@
-# Advisee_Tracker
+Please refer to README.md in the git repo root directory.
