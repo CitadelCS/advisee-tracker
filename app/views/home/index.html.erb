@@ -1,0 +1,18 @@
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Sign Up", signup_path %> or 
+  <%= link_to "Log In", login_path %>
+<% end %>
+
+
+<h1 class="u-text u-text-default u-title u-block-0ba8-5" style="text-align: center;" contenteditable="true" data-block="79" data-block-type="Text" data-block-selected="true" data-editable-id="b027">Department of&nbsp; Cyber and Computer Sciences-<br />Advisee Tracker</h1>
+
+<% if current_user %>
+<% else %>
+    <p style="font-size: 1.5em; text-align: center;">Please log in to continue</p>
+<% end %>
+
+<p style="font-size: 1.5em; text-align: center;">&nbsp;</p>
+

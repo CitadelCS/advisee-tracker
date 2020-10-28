@@ -11,3 +11,571 @@ Migrating to CreateStudents (20201027192150)
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20201028035306)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20201028035306"]]
+  [1m[36m (113.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/home" for 127.0.0.1 at 2020-10-28 06:03:00 +0000
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/root" for 127.0.0.1 at 2020-10-28 06:04:04 +0000
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/root" for 127.0.0.1 at 2020-10-28 06:05:04 +0000
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:05:47 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (13.9ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:08:18 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:28:46 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.6ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:28:46 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 06:28:46 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:31:04 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.8ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:31:04 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 06:31:04 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:31:50 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (9.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:31:50 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.3ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 06:31:50 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:32:10 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:32:10 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 06:32:10 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:45:35 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.7ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:45:35 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 06:45:35 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:56:16 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (6.6ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:56:16 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 06:56:16 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.6ms)
+  Rendered users/new.html.erb (10.1ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 06:56:16 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 06:56:16 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:01:21 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.6ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:01:21 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:01:21 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.3ms)
+  Rendered users/new.html.erb (9.4ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:01:21 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:01:21 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:01:52 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.7ms)
+Completed 200 OK in 11ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:01:52 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:01:52 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.3ms)
+  Rendered users/new.html.erb (9.5ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:01:52 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.3ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:01:52 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:05 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:05 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:02:05 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb (9.0ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:05 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:02:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:46 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:46 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:02:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.9ms)
+  Rendered users/new.html.erb (9.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:46 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:02:46 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.6ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:58 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:58 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:02:58 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.1ms)
+  Rendered users/new.html.erb (9.2ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:02:58 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:02:58 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2020-10-28 07:02:58 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"JeffreySchuitema@outlook.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "JeffreySchuitema@outlook.com"]]
+  Rendered sessions/new.html.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 4.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:03:11 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (6.0ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:03:11 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:03:11 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.2ms)
+  Rendered users/new.html.erb (9.2ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:03:11 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:03:11 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:06:05 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:06:05 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:06:05 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb (9.1ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:06:05 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:06:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:06:40 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:06:40 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:06:40 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.2ms)
+  Rendered users/new.html.erb (9.4ms)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:06:40 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:06:40 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2020-10-28 07:06:40 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"JeffreySchuitema@outlook.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "JeffreySchuitema@outlook.com"]]
+  Rendered sessions/new.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:09:27 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.5ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:09:27 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:09:27 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (8.6ms)
+  Rendered users/new.html.erb (10.7ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:09:27 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:09:27 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2020-10-28 07:09:27 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"JeffreySchuitema@outlook.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "JeffreySchuitema@outlook.com"]]
+  Rendered sessions/new.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:12:06 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (5.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:12:06 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+Started GET "/signup" for 127.0.0.1 at 2020-10-28 07:12:06 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb (9.1ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2020-10-28 07:12:06 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.2ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2020-10-28 07:12:06 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.7ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2020-10-28 07:12:06 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "email"=>"JeffreySchuitema@outlook.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "JeffreySchuitema@outlook.com"]]
+  Rendered sessions/new.html.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
