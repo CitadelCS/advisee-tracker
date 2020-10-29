@@ -13,7 +13,10 @@ Rails.application.routes.draw do
     
   get 'students/index'
     
+  get 'students/new'
+    
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'addnew', to: 'students#new', as: 'addnew'
 end

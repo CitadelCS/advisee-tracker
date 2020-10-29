@@ -26,6 +26,7 @@ module NavigationHelpers
         
     when /^the main page$/ then '/students/index'
         
+    when /^add new student page$/ then '/addnew'    
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
