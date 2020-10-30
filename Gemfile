@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '>= 2.4.0'
+ruby '>= 2.4.0', '< 3.0'
 gem 'rails', '4.2.10'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
@@ -30,3 +30,5 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
 gem 'haml'
+gem 'sprockets', '3.6.3'
+#gem "haml-rails", "~> 2.0"

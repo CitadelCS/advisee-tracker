@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20201027192150) do
     t.string   "CWID"
     t.datetime "DOB"
     t.string   "advisor"
-    t.string   "graduationYear"
-    t.string   "graduationSemester"
+    t.string   "year"
+    t.string   "semester"
+    t.datetime 'lastMeet'
     t.datetime "created_at"
     t.datetime "updated_at"
   end

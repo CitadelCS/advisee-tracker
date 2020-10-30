@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-    root :to => redirect('/students')
-    resources :students
+  #get 'students/index'
+
+  root :to => redirect('/students')
+  resources :students
 end
