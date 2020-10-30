@@ -3828,3 +3828,178 @@ Processing by StudentsController#index as HTML
   [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
   Rendered students/index.html.erb (1.9ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 155.225.2.100 at 2020-10-30 00:42:52 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (113.5ms)
+Completed 200 OK in 126ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 155.225.2.100 at 2020-10-30 00:43:25 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (25.4ms)
+  Rendered users/new.html.erb (33.3ms)
+Completed 200 OK in 88ms (Views: 37.8ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/users" for 155.225.2.100 at 2020-10-30 00:43:34 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0IFpJK0SbNbSDgUl7DlFEAeMfKrCfPf/9VGOTxk0CpPBtQ8m+KXA4kxpUCVrssTQ/H74qXQBcKlas0Lcy4XdsQ==", "user"=>{"email"=>"jack", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jack' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jack"], ["password_digest", "$2a$12$M4hFDj5N2WIJYqTB03zqjOWXpMfSmhS/v4XKNp8Fpt/trMOz1tWAK"], ["created_at", "2020-10-30 00:43:34.906003"], ["updated_at", "2020-10-30 00:43:34.906003"]]
+  [1m[35m (112.4ms)[0m  commit transaction
+Redirected to https://office-oregano-3000.codio.io/users/3
+Completed 302 Found in 352ms (ActiveRecord: 113.0ms)
+
+
+Started GET "/users/3" for 155.225.2.100 at 2020-10-30 00:43:35 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb (0.7ms)
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 155.225.2.100 at 2020-10-30 00:43:37 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb (9.6ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/3" for 155.225.2.100 at 2020-10-30 00:43:41 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 155.225.2.100 at 2020-10-30 00:43:41 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (0.3ms)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 155.225.2.100 at 2020-10-30 00:43:44 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 155.225.2.100 at 2020-10-30 00:43:48 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lXuIEzL2ir2OvmiWVFhQtPZU+4Kil5gn5MZIl6yhEjCET+4RZ0EmiRDZPZbT09F0DaZ/gRTqH3FLJIQEfhDFEg==", "email"=>"jack ", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jack "]]
+  Rendered sessions/new.html.erb (0.3ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 155.225.2.100 at 2020-10-30 00:43:57 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JNCUpX4tHMGZdwh1xgDtRPh81My8ITVICOKYJqzNdXE15PKnK5qw9QcQXXVBi2yEA45Qzwpcsh6nAFS1fnyiUw==", "email"=>"jack", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jack"]]
+Redirected to https://office-oregano-3000.codio.io/students/index
+Completed 302 Found in 239ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-10-30 00:43:58 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/index.html.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 155.225.2.100 at 2020-10-30 01:25:43 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered home/index.html.erb (53.3ms)
+Completed 200 OK in 59ms (Views: 55.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-10-30 01:25:51 +0000
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (3.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Illegal nesting: nesting within plain text is illegal.):
+    1: <% if current_user %>
+    2:   Logged in as <%= current_user.email %>.
+    3:   <%= link_to "Log Out", logout_path %>
+    4: <% else %>
+    5:   <%= link_to "Sign Up", signup_path %> or 
+  app/views/students/index.html.haml:2
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-10-30 01:26:14 +0000
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (2.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    16:       %th Last Meeting
+    17:   %tbody
+    18:     %tr
+    19:       - @students.each do |student|
+    20:         %td= link_to "#{student.last_name}", student_path(student)
+    21:         %td= student.first_name
+    22:         %td= student.graduation_year
+  app/views/students/index.html.haml:19:in `_app_views_students_index_html_haml___2757326959487806665_70357906935440'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.8ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-10-30 01:27:15 +0000
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (2.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    16:       %th Last Meeting
+    17:   %tbody
+    18:     %tr
+    19:       - @students.each do |student|
+    20:         %td= link_to "#{student.last_name}", student_path(student)
+    21:         %td= student.first_name
+    22:         %td= student.graduation_year
+  app/views/students/index.html.haml:19:in `_app_views_students_index_html_haml___2757326959487806665_70357907939440'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-10-30 01:33:40 +0000
+Processing by StudentsController#index as HTML
+  Rendered students/index.html.haml (2.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    16:       %th Last Meeting
+    17:   %tbody
+    18:     %tr
+    19:       - @students.each do |student|
+    20:         %td= link_to "#{student.last_name}", student_path(student)
+    21:         %td= student.first_name
+    22:         %td= student.graduation_year
+  app/views/students/index.html.haml:19:in `_app_views_students_index_html_haml___2757326959487806665_70357908889960'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.3ms)

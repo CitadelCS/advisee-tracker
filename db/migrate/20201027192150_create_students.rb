@@ -10,7 +10,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string 'graduationSemester'
       # Add fields that let Rails automatically keep track
       # of when students are added or modified:
-      t.timestamps
+      t.timestamps 'lastMeet'
     end
       create_table :faculty do |t|
       t.string 'first'
