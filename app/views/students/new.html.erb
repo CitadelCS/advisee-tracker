@@ -1,0 +1,36 @@
+<p id="alert"><%= alert %></p>
+<h1>Add New Student</h1>
+<%= form_tag addnew_path do |form| %>
+  <div class="field">
+    <%= label_tag :First_Name %>
+    <%= text_field_tag :First_Name %>
+  </div>
+  <div class="field">
+    <%= label_tag :Last_Name %>
+    <%= text_field_tag :Last_Name %>
+  </div>
+<div class="field">
+    <%= label_tag :CWID %>
+    <%= text_field_tag :CWID %>
+  </div>
+<div class="field">
+    <%= label_tag :DOB %>
+    <%= date_field_tag :DOB %> 
+</div>
+<div class="field">
+    <%= label_tag :Advisor %>
+    <%= text_field_tag :Advisor %>
+  </div>
+<div class="field">
+    <%= label_tag :Graduation_Year%>
+    <%= text_field_tag :Graduation_Year %>
+  </div>
+<div class="field">
+    <%= label_tag :Graduation_Semester%>
+    <%= text_field_tag :Graduation_Semester %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "add" %>
+  </div>
+<% end %>
