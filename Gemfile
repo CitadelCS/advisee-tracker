@@ -30,6 +30,5 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
 gem 'haml'
-
-# Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+gem 'sprockets', '3.6.3'
+#gem "haml-rails", "~> 2.0"
