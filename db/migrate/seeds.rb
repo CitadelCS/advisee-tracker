@@ -3,6 +3,6 @@ students = [{:first => 'Joe', :last => 'Allan', :CWID => '5336587', :DOB => '15-
           {:first => 'Jeff', :last => 'Avery', :CWID => '9564086', :DOB => '18-Apr-2001', :advisor => 'Dr. V', :year => '2021', :semester => 'Spring', :lastMeet => '31-Oct-2022'},
   	      ]
 
-students.each do |student
+students.each do |student|
   Student.create!(student)
 end

@@ -1,0 +1,40 @@
+-#  This file is app/views/list.html.haml
+%h1 Students/Faculty
+
+%h2 Students
+
+= form_tag students_path, :method => :get, :id => 'student' do
+  = hidden_field_tag "first_name_sort", true if @first_header
+  = hidden_field_tag "last_name_sort", true if @last_header
+  = hidden_field_tag "advisor_sort", true if @advisor_header
+  = hidden_field_tag "date_sort", true if @date_header
+  Graduation Year:
+  - @all_years.each do |year|
+    = year
+    = check_box_tag "years[#{year}]", 1, @selected_years.include?(year), :id => "years_#{year}"
+  = submit_tag 'Refresh', :id => 'years_submit', :class => 'btn btn-primary'
+
+%table#students.table.table-striped.col-md-12
+  %thead
+    %tr
+      %th{:class => @title_header}= link_to 'First', students_path(:sort => 'first', :ratings => @selected_years), :id => 'first_header'
+      %th{:class => @date_header}= link_to 'Last', students_path(:sort => 'last', :ratings => @selected_years), :id => 'last_header'
+      %th CWID
+      %th{:class => @advisor_header}= link_to 'Advisor', students_path(:sort => 'advisor', :ratings => @selected_years), :id => 'advisor_header'
+      %th Graduation Year
+      %th Graduation Semester
+      %th Date Last Advised
+      %th More Info
+  %tbody
+    - @students.each do |student|
+      %tr
+        %td= student.first
+        %td= student.last
+        %td= student.CWID
+        %td= student.advisor
+        %td= student.year
+        %td= student.semester
+        %td= student.lastMeet
+        %td= link_to "More about #{student.last}", student_path(student)
+
+= link_to 'Add new student', new_student_path
