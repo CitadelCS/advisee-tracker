@@ -35,6 +35,6 @@
         %td= student.year
         %td= student.semester
         %td= student.lastMeet
-        %td= link_to "More about #{student.last}", student_path(student)
+        %td= link_to "More about #{student.last}", students_path(student)
 
-= link_to 'Add new student', new_student_path
+= link_to 'Add New Student', addnew_path
