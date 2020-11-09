@@ -11556,3 +11556,130 @@ Processing by StudentsController#index as HTML
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
   Rendered students/index.html.haml within layouts/application (3.1ms)
 Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:58 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 211ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/scaffolds.self-471579eb251606c7dab7427eb48034a497999eb4361f00eaa6470a6f0dea8b63.css?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:07:59 +0000
+
+
+Started GET "/login" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:08:05 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:08:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uwMjviLin/K/BPPIEjxGzp6tlOQgJ5j/zEKY/7hqdQCL5m8hX8WWrSzRU7tk8KoErBBZj+4OjXYvYNXX7KO5dQ==", "email"=>"admin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "admin"]]
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 85ms (Views: 23.7ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/sessions" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:08:28 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wfWdCuQPbDP1124S4F33TFtnXgjxm4IJrb7owjOk1K3xENGVmShlbGYCzmGWkRuGadqTYz+yl4BOnKXqZ20Y2A==", "email"=>"rmaharre@citadel.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "rmaharre@citadel.edu"]]
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:08:36 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (9.6ms)
+  Rendered users/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:08:49 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yafyutZcH8u9cb3YTFFrHfE0851nsDF0gSo+DVeoReb5Qr4lq3sWlC6kHas6nYfXw4k+9qmZJP1iCHMlA2GJkw==", "user"=>{"email"=>"Admin", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'Admin' LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "Admin"], ["password_digest", "$2a$10$SkF49CYVXBLwKKxgBicHdOkvEwK22ieXgOWtSaEpNV3HMtDR.fP1."], ["created_at", "2020-11-09 09:08:49.146588"], ["updated_at", "2020-11-09 09:08:49.146588"]]
+  [1m[35m (98.4ms)[0m  commit transaction
+Redirected to https://pilot-legend-3000.codio.io/users/3
+Completed 302 Found in 169ms (ActiveRecord: 100.7ms)
+
+
+Started GET "/users/3" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:08:49 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:09:01 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:09:03 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:09:09 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"js0qZMaaN7dPtrKt9E/1CbMrBJmvY6Jn74NZ0g0gDYa+KGb7u70+6NxjEt6CgxnDgZbJ8mFKt+4MoRT6WenB8w==", "email"=>"Admin", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "Admin"]]
+Redirected to https://pilot-legend-3000.codio.io/students/index
+Completed 302 Found in 61ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/students/index" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:09:09 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students.1" for 2601:741:8080:97a0:9dc9:571:b793:6b5d at 2020-11-09 09:09:25 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.3ms)
