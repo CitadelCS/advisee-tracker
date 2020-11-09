@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
     
   def student_params
-     params.require(:student).permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet)
+     params.permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet)
   end
  
   def show
@@ -62,13 +62,8 @@ class StudentsController < ApplicationController
   end
     
   def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to "/students/index", notice: "Logged in"
-    else
-      flash.now[:alert] = "Invalid entry, please try again"
-      render "new"
-    end
+    @student = Student.create!(student_params)
+    
+    redirect_to students_path
   end
 end
