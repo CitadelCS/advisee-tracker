@@ -11928,3 +11928,133 @@ ActionView::Template::Error (undefined local variable or method `student' for #<
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:47:28 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:       %th Academid Advisor
+    14:       %th Last Meeting
+    15:   %tbody
+    16:     - @student.each do |student|
+    17:       %tr
+    18:         %td= student.last
+    19:         %td= student.first
+  app/views/student/index.html.haml:16:in `_app_views_student_index_html_haml__3189966929057095622_70233759194260'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:51:53 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10:       %th Academid Advisor
+    11:       %th Last Meeting
+    12:   %tbody
+    13:     - @student.each do |student|
+    14:       %tr
+    15:         %td= student.last
+    16:         %td= student.first
+  app/views/student/index.html.haml:13:in `_app_views_student_index_html_haml__3189966929057095622_47340060908660'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.5ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:52:25 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/advisee-tracker/app/views/student/index.html.haml:13: syntax error, unexpected do, expecting end
+ @students do |student|
+           ^~
+/home/codio/workspace/advisee-tracker/app/views/student/index.html.haml:37: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/student/index.html.haml:13: syntax error, unexpected do, expecting end
+  app/views/student/index.html.haml:37: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.4ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:52:50 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/advisee-tracker/app/views/student/index.html.haml:13: syntax error, unexpected do, expecting end
+ @student do |student|
+          ^~
+/home/codio/workspace/advisee-tracker/app/views/student/index.html.haml:37: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/student/index.html.haml:13: syntax error, unexpected do, expecting end
+  app/views/student/index.html.haml:37: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:56:09 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    12:       %th Academid Advisor
+    13:       %th Last Meeting
+    14:   %tbody
+    15:       %tr
+    16:         %td= student.last
+    17:         %td= student.first
+    18:         %td= student.year
+  app/views/student/index.html.haml:15
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.8ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:59:51 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `last' for nil:NilClass):
+    13:       %th Last Meeting
+    14:   %tbody
+    15:     %tr
+    16:       %td= student.last
+    17:       %td= student.first
+    18:       %td= student.year
+    19:       %td= student.CWID
+  app/views/student/index.html.haml:16:in `_app_views_student_index_html_haml__3189966929057095622_47340062496120'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.5ms)

@@ -1,7 +1,6 @@
-<h2>Welcome To The Student View!</h2>
-<p>Users should be able to see a students information in a table and another table of notes, similar to the rotten potatoes app table.</p>
-
 %h2 Student View
+
+-student = student
 
 %table#students.table.table-striped.col-md-12
   %thead
@@ -21,7 +20,7 @@
       %td= student.advisor
       %td= student.lastMeet
 
-//= link_to 'Add New Meeting', new_meeting_path
+= link_to 'Add New Meeting', new_meeting_path
 
 %table#meetings.table.table-striped.col-md-12
   %thead
