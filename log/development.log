@@ -11906,3 +11906,25 @@ ActionView::Template::Error (undefined local variable or method `student' for #<
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/student/index" for 155.225.2.100 at 2020-11-09 12:38:22 +0000
+Processing by StudentController#index as HTML
+  Rendered student/index.html.haml within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x00007f5edc85bc08>:0x00007f5edc858b98>):
+    14:       %th Last Meeting
+    15:   %tbody
+    16:     %tr
+    17:       %td= student.last
+    18:       %td= student.first
+    19:       %td= student.year
+    20:       %td= student.CWID
+  app/views/student/index.html.haml:17:in `_app_views_student_index_html_haml__655635663828656392_70022701778740'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.7ms)
