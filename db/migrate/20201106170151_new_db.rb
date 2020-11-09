@@ -21,5 +21,13 @@ class NewDb < ActiveRecord::Migration
       # of when students are added or modified:
       t.timestamps
     end 
+      create_table :meetings do |t|
+      t.string 'student'
+      t.spring 'date'
+      t.string 'note_tacker'
+      t.string 'note'
+      # Add fields that let Rails automatically keep track
+      # of when students are added or modified:
+      t.timestamps
   end
 end
