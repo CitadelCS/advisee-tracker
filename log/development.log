@@ -9821,3 +9821,1738 @@ Started GET "/addnew" for 98.122.43.140 at 2020-11-06 17:15:34 +0000
 Processing by StudentsController#new as HTML
   Rendered students/new.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (84.3ms)[0m  [1mCREATE TABLE "faculty" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (88.4ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "CWID" varchar, "DOB" datetime, "advisor" varchar, "year" varchar, "semester" varchar, "lastMeet" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (101.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (87.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (91.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (85.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201106171016')
+  [1m[36m (88.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201106170151')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Joe"], ["last", "Allan"], ["CWID", "5336587"], ["DOB", "2000-02-15 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-29 00:00:00.000000"], ["created_at", "2020-11-08 19:45:59.761961"], ["updated_at", "2020-11-08 19:45:59.761961"]]
+  [1m[36m (87.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Arnold"], ["CWID", "11183184"], ["DOB", "2000-08-04 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-30 00:00:00.000000"], ["created_at", "2020-11-08 19:45:59.851993"], ["updated_at", "2020-11-08 19:45:59.851993"]]
+  [1m[35m (93.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Jeff"], ["last", "Avery"], ["CWID", "9564086"], ["DOB", "2001-04-18 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-31 00:00:00.000000"], ["created_at", "2020-11-08 19:45:59.947881"], ["updated_at", "2020-11-08 19:45:59.947881"]]
+  [1m[36m (87.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 203ms (Views: 202.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/assets/scaffolds.self-471579eb251606c7dab7427eb48034a497999eb4361f00eaa6470a6f0dea8b63.css?body=1" for 155.225.2.100 at 2020-11-08 19:46:07 +0000
+
+
+Started GET "/login" for 155.225.2.100 at 2020-11-08 19:46:11 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 155.225.2.100 at 2020-11-08 19:46:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wxnPqLjIAL7ihcCLgWMW9pOkAAsSMGGU89PYqWhdYGnhBvNkmz6ZhVwi4z73/+OeTMNrgEeshy4b/ISiVqeXcg==", "email"=>"jkreisl1@citadel.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jkreisl1@citadel.edu"]]
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 123ms (Views: 38.3ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/sessions" for 155.225.2.100 at 2020-11-08 19:46:17 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SvZkgzt7mBb0mAjHqNxAxeykK4rDax0cSOMG5XYFOCFo6VhPGI0BLUo/K3LeQLWtM8NAAZb3+6agzFruSP/POg==", "email"=>"jkreisl1@citadel.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "jkreisl1@citadel.edu"]]
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup" for 155.225.2.100 at 2020-11-08 19:46:22 +0000
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (16.0ms)
+  Rendered users/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 155.225.2.100 at 2020-11-08 19:46:26 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j3XOjZXRJMWovUAAXWRdZLziYGvP0YQx4mrAOi+Jhj6tavJBtie9/hYaY7Ur+KgMY4UL4JpNYosKRZwxEXNxJQ==", "user"=>{"email"=>"jkreisl1@citadel.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jkreisl1@citadel.edu' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jkreisl1@citadel.edu"], ["password_digest", "$2a$10$8zfmqWX.UXHgCVdolRAaO.l73NJ.bBQdzC5xtBHHME2y2nBhNCo0O"], ["created_at", "2020-11-08 19:46:27.030408"], ["updated_at", "2020-11-08 19:46:27.030408"]]
+  [1m[35m (103.2ms)[0m  commit transaction
+Redirected to https://nevada-winter-3000.codio.io/users/2
+Completed 302 Found in 255ms (ActiveRecord: 103.7ms)
+
+
+Started GET "/users/2" for 155.225.2.100 at 2020-11-08 19:46:27 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 155.225.2.100 at 2020-11-08 19:46:30 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/2" for 155.225.2.100 at 2020-11-08 19:46:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 155.225.2.100 at 2020-11-08 19:46:35 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 155.225.2.100 at 2020-11-08 19:46:37 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 155.225.2.100 at 2020-11-08 19:46:39 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 155.225.2.100 at 2020-11-08 19:46:40 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ln1ZBHIGjtTsTwKhQGMtHe7LE0ZnNktwJsAOg5tFQRa0YmXIUfAX71LoIRQ2/9h1Max4zTKqrcrO71KIpb+2DQ==", "email"=>"jkreisl1@citadel.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "jkreisl1@citadel.edu"]]
+Redirected to https://nevada-winter-3000.codio.io/students/index
+Completed 302 Found in 68ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 19:46:40 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/addnew" for 155.225.2.100 at 2020-11-08 19:46:43 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (123.6ms)[0m  [1mCREATE TABLE "faculty" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (93.7ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "CWID" varchar, "DOB" datetime, "advisor" varchar, "year" varchar, "semester" varchar, "lastMeet" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (91.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (86.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (89.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (192.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201106171016')
+  [1m[36m (96.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201106170151')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Joe"], ["last", "Allan"], ["CWID", "5336587"], ["DOB", "2000-02-15 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-29 00:00:00.000000"], ["created_at", "2020-11-08 19:50:20.119350"], ["updated_at", "2020-11-08 19:50:20.119350"]]
+  [1m[36m (79.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Arnold"], ["CWID", "11183184"], ["DOB", "2000-08-04 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-30 00:00:00.000000"], ["created_at", "2020-11-08 19:50:20.201265"], ["updated_at", "2020-11-08 19:50:20.201265"]]
+  [1m[35m (119.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Jeff"], ["last", "Avery"], ["CWID", "9564086"], ["DOB", "2001-04-18 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-31 00:00:00.000000"], ["created_at", "2020-11-08 19:50:20.323027"], ["updated_at", "2020-11-08 19:50:20.323027"]]
+  [1m[36m (134.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+
+
+Started GET "/" for 155.225.2.100 at 2020-11-08 19:50:32 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (163.8ms)
+Completed 200 OK in 485ms (Views: 440.3ms | ActiveRecord: 44.7ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 19:50:38 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (15.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (60.3ms)
+Completed 200 OK in 84ms (Views: 45.1ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/addnew" for 155.225.2.100 at 2020-11-08 19:50:41 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/addnew" for 155.225.2.100 at 2020-11-08 19:51:00 +0000
+
+ActionController::RoutingError (No route matches [POST] "/addnew"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.1ms)
+
+
+Started GET "/" for 155.225.2.100 at 2020-11-08 20:00:04 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (60.1ms)
+Completed 200 OK in 328ms (Views: 325.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:00:11 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=index):
+  app/controllers/students_controller.rb:9:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (97.1ms)[0m  [1mCREATE TABLE "faculty" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "title" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (94.0ms)[0m  CREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first" varchar, "last" varchar, "CWID" varchar, "DOB" datetime, "advisor" varchar, "year" varchar, "semester" varchar, "lastMeet" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (93.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (104.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (102.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (117.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20201106171016')
+  [1m[36m (91.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20201106170151')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Joe"], ["last", "Allan"], ["CWID", "5336587"], ["DOB", "2000-02-15 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-29 00:00:00.000000"], ["created_at", "2020-11-08 20:00:50.099032"], ["updated_at", "2020-11-08 20:00:50.099032"]]
+  [1m[36m (100.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Ryan"], ["last", "Arnold"], ["CWID", "11183184"], ["DOB", "2000-08-04 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-30 00:00:00.000000"], ["created_at", "2020-11-08 20:00:50.201320"], ["updated_at", "2020-11-08 20:00:50.201320"]]
+  [1m[35m (84.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Jeff"], ["last", "Avery"], ["CWID", "9564086"], ["DOB", "2001-04-18 00:00:00.000000"], ["advisor", "Dr. V"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2022-10-31 00:00:00.000000"], ["created_at", "2020-11-08 20:00:50.287042"], ["updated_at", "2020-11-08 20:00:50.287042"]]
+  [1m[36m (90.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:00:59 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 35ms (ActiveRecord: 1.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=index):
+  app/controllers/students_controller.rb:9:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:01:20 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (39.3ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x00007f80389d7d20>:0x00007f80389d4c10>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:01:21 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x00007f80389d7d20>:0x00007f80380c1fb0>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:02:26 +0000
+
+ArgumentError (Invalid route name, already in use: 'students' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:24:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.7ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:02:49 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=index):
+  app/controllers/students_controller.rb:9:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.6ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:03:32 +0000
+
+ArgumentError (Invalid route name, already in use: 'students' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:24:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.0ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:03 +0000
+
+ArgumentError (Invalid route name, already in use: 'students' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:24:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:04 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x000056022dbe7a50>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.6ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:06 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x00007f80382a65d8>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.6ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:07 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x00007f8038751ba0>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.9ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:08 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (21.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x000056022dcdd680>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:09 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x00007f8038380648>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.8ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:04:10 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x00007f8038865870>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', addnew_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_70094341269140'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:05:02 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `new_students_path' for #<#<Class:0x000056022dbdb200>:0x000056022e261278>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', new_students_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_47283682221160'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:05:03 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `new_students_path' for #<#<Class:0x000056022dbdb200>:0x00007f80386fd780>):
+    37:         %td= student.lastMeet
+    38:         %td= link_to "More about #{student.last}", students_path(student)
+    39: 
+    40: = link_to 'Add New Student', new_students_path
+  app/views/students/index.html.haml:40:in `_app_views_students_index_html_haml___1911622389052882051_47283682221160'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 249ms (Views: 248.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:09 +0000
+
+
+Started GET "/students/new" for 155.225.2.100 at 2020-11-08 20:05:21 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `addnew_path' for #<#<Class:0x000056022dbdb200>:0x00007f80397075b8>):
+    1: <p id="alert"><%= alert %></p>
+    2: <h1>Add New Student</h1>
+    3: <%= form_tag addnew_path do |form| %>
+    4:   <div class="field">
+    5:     <%= label_tag :First_Name %>
+    6:     <%= text_field_tag :First_Name %>
+  app/views/students/new.html.erb:3:in `_app_views_students_new_html_erb___2084750730932720698_70094348100960'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.7ms)
+
+
+Started GET "/students/new" for 155.225.2.100 at 2020-11-08 20:05:44 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"students"} missing required keys: [:id]):
+    1: <p id="alert"><%= alert %></p>
+    2: <h1>Add New Student</h1>
+    3: <%= form_tag student_path do |form| %>
+    4:   <div class="field">
+    5:     <%= label_tag :First_Name %>
+    6:     <%= text_field_tag :First_Name %>
+  app/views/students/new.html.erb:3:in `_app_views_students_new_html_erb___2084750730932720698_70094345439580'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/students/new" for 155.225.2.100 at 2020-11-08 20:05:46 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"destroy", :controller=>"students"} missing required keys: [:id]):
+    1: <p id="alert"><%= alert %></p>
+    2: <h1>Add New Student</h1>
+    3: <%= form_tag student_path do |form| %>
+    4:   <div class="field">
+    5:     <%= label_tag :First_Name %>
+    6:     <%= text_field_tag :First_Name %>
+  app/views/students/new.html.erb:3:in `_app_views_students_new_html_erb___2084750730932720698_70094345439580'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/students/new" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:05:52 +0000
+
+
+Started POST "/students" for 155.225.2.100 at 2020-11-08 20:06:17 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fcUDD4m7qaOh/jN1HV601GSIvgme7tO16Cr84miw9/5f2j/Dqk0wmB9ZEMBrwkG8u+/VgstyNQ8ABaDpVkoA5Q==", "First_Name"=>"Jack", "Last_Name"=>"Kreisler", "CWID"=>"1062390", "DOB"=>"1999-04-18", "Advisor"=>"Bill", "Graduation_Year"=>"2021", "Graduation_Semester"=>"May", "commit"=>"add"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered students/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 11.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:06:24 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students.1" for 155.225.2.100 at 2020-11-08 20:06:32 +0000
+
+ActionController::RoutingError (No route matches [GET] "/students.1"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.1ms)
+
+
+Started GET "/students/new" for 155.225.2.100 at 2020-11-08 20:06:44 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 155.225.2.100 at 2020-11-08 20:07:25 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2tJLAZsbWIGiarNoPrXwln4e59s6cnDCe301DwV3wTr4zXfNuO3BuhzNkN1IKQX+oXmMUG/ulniTUmkEO402IQ==", "First_Name"=>"John", "Last_Name"=>"Kreisler", "CWID"=>"10623190", "DOB"=>"1999-04-18", "Advisor"=>"Dr. V", "Graduation_Year"=>"2021", "Graduation_Semester"=>"Spring", "commit"=>"add"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered students/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/students" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2tJLAZsbWIGiarNoPrXwln4e59s6cnDCe301DwV3wTr4zXfNuO3BuhzNkN1IKQX+oXmMUG/ulniTUmkEO402IQ==", "First_Name"=>"John", "Last_Name"=>"Kreisler", "CWID"=>"10623190", "DOB"=>"1999-04-18", "Advisor"=>"Dr. V", "Graduation_Year"=>"2021", "Graduation_Semester"=>"Spring", "commit"=>"add"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  Rendered students/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 155.225.2.100 at 2020-11-08 20:08:48 +0000
+
+
+Started POST "/students" for 155.225.2.100 at 2020-11-08 20:09:03 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LToklJpuMfk7Uie5zA6yGoKrTFV8qfUaE/9Xsagx6ggPJRhYuZiowoX1BAy6kkdyXcwn3ik1E6D70Au6lssdEw==", "first"=>"3", "last"=>"j", "CWID"=>"8", "DOB"=>"2021-12-09", "Advisor"=>"jjj", "year"=>"2021", "semester"=>"Spring", "commit"=>"add"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  Rendered students/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/index" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 155.225.2.100 at 2020-11-08 20:09:11 +0000
+
+
+Started GET "/" for 154.21.21.19 at 2020-11-08 21:07:17 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 258ms (Views: 238.9ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:07:17 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:07:17 +0000
+
+
+Started GET "/students/index" for 154.21.21.19 at 2020-11-08 21:07:21 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:07:23 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:07:35 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/g6K39wsTYcVXDzaF5KOfK//pzKDCBszCZg0TYo9o6jcEbYT/9rUvKv7H29hDnsUcJjMudaU/Ynht2hGtMdUsw==", "first"=>"jack", "last"=>"kreisler", "CWID"=>"21238", "DOB"=>"2021-11-09", "Advisor"=>"ddkjnjk", "year"=>"2010", "semester"=>"djjkw", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.1ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:08:52 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/advisee-tracker/app/views/students/new.html.erb:32: syntax error, unexpected '=', expecting ')'
+...put_buffer.append=( :lastMeet = null );@output_buffer.safe_a...
+...                              ^):
+  app/views/students/new.html.erb:32: syntax error, unexpected '=', expecting ')'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:09:31 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/advisee-tracker/app/views/students/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+...pend=( label_tag :Last Advising);@output_buffer.safe_append='
+...                       ^~~~~~~~):
+  app/views/students/new.html.erb:33: syntax error, unexpected tCONSTANT, expecting ')'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.6ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 61ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.19 at 2020-11-08 21:09:47 +0000
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:10:06 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"orRF/4Fqvy1MCbLYOoCOIq5iveFCC9N+lq60yezxG4aAq3kzopwmFvKukW1MHHtKcQXWaheXNcR+gejC0gvsnQ==", "first"=>"njn", "last"=>"kjnkjn", "CWID"=>"29929", "DOB"=>"2021-12-09", "Advisor"=>"jhedhbh", "year"=>"2010", "semester"=>"May", "lastmeet"=>"October", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:10:49 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"orRF/4Fqvy1MCbLYOoCOIq5iveFCC9N+lq60yezxG4aAq3kzopwmFvKukW1MHHtKcQXWaheXNcR+gejC0gvsnQ==", "first"=>"njn", "last"=>"kjnkjn", "CWID"=>"29929", "DOB"=>"2021-12-09", "Advisor"=>"jhedhbh", "year"=>"2010", "semester"=>"May", "lastmeet"=>"October", "commit"=>"add"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.8ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.19 at 2020-11-08 21:10:53 +0000
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:10:57 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OcEG3Bg5hjdee3TJbMcshf1F4xqNshsJPRc6MizXtLwb3joQO88fDODcV3waW9ntIiKIkdgu/bPVOGY5Ei1Dpw==", "first"=>"njn", "last"=>"kjnkjn", "CWID"=>"29929", "DOB"=>"2021-12-09", "Advisor"=>"jhedhbh", "year"=>"2010", "semester"=>"May", "lastmeet"=>"2021-12-09", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.6ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:15:57 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OcEG3Bg5hjdee3TJbMcshf1F4xqNshsJPRc6MizXtLwb3joQO88fDODcV3waW9ntIiKIkdgu/bPVOGY5Ei1Dpw==", "first"=>"njn", "last"=>"kjnkjn", "CWID"=>"29929", "DOB"=>"2021-12-09", "Advisor"=>"jhedhbh", "year"=>"2010", "semester"=>"May", "lastmeet"=>"2021-12-09", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:16:00 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:16:24 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCz/qm5wjCbjDLbqVT1Wr8AxFXGQakCG0GsHjdwrSI9aM8NmTYYVHV2rlV8joaPHH1Z++sX2pjw4RFuG4tG/lA==", "first"=>"Joak", "last"=>"krei", "CWID"=>"10623190", "DOB"=>"2021-01-09", "Advisor"=>"DR bob", "year"=>"2010", "semester"=>"June", "lastmeet"=>"2021-12-09", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.7ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:18:16 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCz/qm5wjCbjDLbqVT1Wr8AxFXGQakCG0GsHjdwrSI9aM8NmTYYVHV2rlV8joaPHH1Z++sX2pjw4RFuG4tG/lA==", "first"=>"Joak", "last"=>"krei", "CWID"=>"10623190", "DOB"=>"2021-01-09", "Advisor"=>"DR bob", "year"=>"2010", "semester"=>"June", "lastmeet"=>"2021-12-09", "commit"=>"add"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:18:19 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/advisee-tracker/app/views/students/new.html.erb:3: syntax error, unexpected do (for block), expecting '.' or &. or :: or '['
+...pend=  form_tag for @student do |form| @output_buffer.safe_a...
+...                             ^~
+/home/codio/workspace/advisee-tracker/app/views/students/new.html.erb:42: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/students/new.html.erb:3: syntax error, unexpected do (for block), expecting '.' or &. or :: or '['
+  app/views/students/new.html.erb:42: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 66.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.19 at 2020-11-08 21:19:14 +0000
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:19:17 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.0ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:25:17 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant StudentsController::Students):
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.5ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:25:44 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: student):
+  app/controllers/students_controller.rb:4:in `student_params'
+  app/controllers/students_controller.rb:65:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.0ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:27:47 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first", ""], ["last", ""], ["CWID", ""], ["year", ""], ["semester", ""], ["created_at", "2020-11-08 21:27:47.664824"], ["updated_at", "2020-11-08 21:27:47.664824"]]
+  [1m[36m (134.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 137.4ms)
+
+NoMethodError (undefined method `title' for nil:NilClass):
+  app/controllers/students_controller.rb:66:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.5ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:28:07 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first", ""], ["last", ""], ["CWID", ""], ["year", ""], ["semester", ""], ["created_at", "2020-11-08 21:28:07.937698"], ["updated_at", "2020-11-08 21:28:07.937698"]]
+  [1m[35m (121.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 122.2ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/students_controller.rb:66:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.7ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:28:21 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first", ""], ["last", ""], ["CWID", ""], ["year", ""], ["semester", ""], ["created_at", "2020-11-08 21:28:21.127257"], ["updated_at", "2020-11-08 21:28:21.127257"]]
+  [1m[36m (97.3ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 97.9ms)
+
+NameError (undefined local variable or method `student_path' for #<StudentsController:0x0000557f0c4fcca8>):
+  app/controllers/students_controller.rb:67:in `create'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.1ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEfawJC7kaXxYmZsJW9kTVkwthNlD2AWDbMlogMP1bomWOYMs00Ink/FRdlT85ElhlfdmDCThqzlnHmpPfUioQ==", "first"=>"", "last"=>"", "CWID"=>"", "DOB"=>"", "Advisor"=>"", "year"=>"", "semester"=>"", "lastmeet"=>"", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first", ""], ["last", ""], ["CWID", ""], ["year", ""], ["semester", ""], ["created_at", "2020-11-08 21:28:28.393058"], ["updated_at", "2020-11-08 21:28:28.393058"]]
+  [1m[35m (86.7ms)[0m  commit transaction
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 93ms (ActiveRecord: 87.3ms)
+
+
+Started GET "/students" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.19 at 2020-11-08 21:28:28 +0000
+
+
+Started GET "/students?utf8=%E2%9C%93&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1&commit=Refresh" for 154.21.21.19 at 2020-11-08 21:28:34 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"utf8"=>"✓", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://nevada-winter-3000.codio.io/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.19 at 2020-11-08 21:28:34 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for 154.21.21.19 at 2020-11-08 21:28:36 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 154.21.21.19 at 2020-11-08 21:28:51 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q1fOEaF/AayS9BgO+Q+LW9aMiYYVibVeImfWh6Eub1SJSPLdgomYlyxTO7uPk34zCeviDUAVU+TKSIqMn9SYTw==", "first"=>"Joack", "last"=>"Kreisl", "CWID"=>"21o288", "DOB"=>"2019-10-07", "Advisor"=>"Dmfjndkfnk", "year"=>"2010", "semester"=>"jkdkkk2", "lastmeet"=>"2019-10-07", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first", "Joack"], ["last", "Kreisl"], ["CWID", "21o288"], ["DOB", "2019-10-07 00:00:00.000000"], ["year", "2010"], ["semester", "jkdkkk2"], ["created_at", "2020-11-08 21:28:51.542419"], ["updated_at", "2020-11-08 21:28:51.542419"]]
+  [1m[36m (112.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 116ms (ActiveRecord: 112.9ms)
+
+
+Started GET "/students" for 154.21.21.19 at 2020-11-08 21:28:51 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://nevada-winter-3000.codio.io/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.19 at 2020-11-08 21:28:51 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 154.21.21.126 at 2020-11-09 04:10:52 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 234ms (Views: 219.0ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.126 at 2020-11-09 04:10:53 +0000
+
+
+Started GET "/students/index" for 154.21.21.126 at 2020-11-09 04:11:01 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://nevada-winter-3000.codio.io/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:11:01 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/new" for 154.21.21.126 at 2020-11-09 04:11:04 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.122.43.140 at 2020-11-09 04:11:08 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/scaffolds.self-471579eb251606c7dab7427eb48034a497999eb4361f00eaa6470a6f0dea8b63.css?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 98.122.43.140 at 2020-11-09 04:11:09 +0000
+
+
+Started POST "/students" for 154.21.21.126 at 2020-11-09 04:11:45 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e2ZgNMb7aLSl6csSH2wvq4GdL1o5A2lqlT1wjpw0AC9ZeVz45Q3xjxtO6Kdp8NrDXvpE0Wyfj9B9EiyFos73NA==", "first"=>"jack", "last"=>"jgg", "CWID"=>"7890", "DOB"=>"2019-10-07", "Advisor"=>"dr fil", "year"=>"2021", "semester"=>"spring", "lastmeet"=>"2020-11-03", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first", "jack"], ["last", "jgg"], ["CWID", "7890"], ["DOB", "2019-10-07 00:00:00.000000"], ["year", "2021"], ["semester", "spring"], ["created_at", "2020-11-09 04:11:45.518584"], ["updated_at", "2020-11-09 04:11:45.518584"]]
+  [1m[36m (282.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 287ms (ActiveRecord: 282.6ms)
+
+
+Started GET "/students" for 154.21.21.126 at 2020-11-09 04:11:45 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://nevada-winter-3000.codio.io/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:11:46 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?utf8=%E2%9C%93&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1&commit=Refresh" for 154.21.21.126 at 2020-11-09 04:12:10 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"utf8"=>"✓", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:12:10 +0000
+
+
+Started GET "/students/new" for 154.21.21.126 at 2020-11-09 04:12:27 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 98.122.43.140 at 2020-11-09 04:12:36 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 98.122.43.140 at 2020-11-09 04:12:39 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 98.122.43.140 at 2020-11-09 04:12:42 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIhPYeU1CVsT/dAUDptmlJKB8Aj4lh7O9wIbgpOyC7arSOdZ5bzNEm4+L3tSC96JbC36Z1PlzhnrrT5xgPCTzw==", "email"=>"rskibick@citadel.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "rskibick@citadel.edu"]]
+Redirected to https://nevada-winter-3000.codio.io/students/index
+Completed 302 Found in 62ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students/index" for 98.122.43.140 at 2020-11-09 04:12:42 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for 98.122.43.140 at 2020-11-09 04:12:56 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 154.21.21.126 at 2020-11-09 04:13:25 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXmPNMmTdxgnqzZsD+nzeM8Ym1V/YTVh94GFjNE4lIbnZrP46mXuI5kMFdl5dQYQEH/w3ir909sfrtmH78JjnQ==", "first"=>"Jack ", "last"=>"Kreisler", "CWID"=>"10623190", "DOB"=>"1999-01-07", "Advisor"=>"Dr. V", "year"=>"2021", "semester"=>"Spring", "lastmeet"=>"2020-11-04", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "DOB", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jack "], ["last", "Kreisler"], ["CWID", "10623190"], ["DOB", "1999-01-07 00:00:00.000000"], ["year", "2021"], ["semester", "Spring"], ["created_at", "2020-11-09 04:13:25.827085"], ["updated_at", "2020-11-09 04:13:25.827085"]]
+  [1m[35m (114.5ms)[0m  commit transaction
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 118ms (ActiveRecord: 114.9ms)
+
+
+Started GET "/students" for 154.21.21.126 at 2020-11-09 04:13:26 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://nevada-winter-3000.codio.io/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:13:26 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')[0m
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?ratings%5B2021%5D=1&ratings%5B2022%5D=1&ratings%5B2023%5D=1&ratings%5B2024%5D=1&ratings%5B2025%5D=1&sort=advisor" for 154.21.21.126 at 2020-11-09 04:13:33 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"ratings"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "sort"=>"advisor"}
+Redirected to https://nevada-winter-3000.codio.io/students?sort=advisor&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=advisor&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:13:33 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"advisor", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-09 04:13:35 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DVrjOhYjmZd4sCA/+jnN0CwbGAJwspq3+4TDrTzeBQc2mksCFqpd3gVz31CmqXXN0rcSbdvBSmDnK+ZeL5ydfg==", "first"=>"harry", "last"=>"buttstink", "CWID"=>"102938579", "DOB"=>"2331-01-31", "Advisor"=>"Dr. Sot", "year"=>"2022", "semester"=>"Fall", "lastmeet"=>"9559-10-04", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, Advisor, lastmeet, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "year", "semester", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["first", "harry"], ["last", "buttstink"], ["CWID", "102938579"], ["DOB", "2331-01-31 00:00:00.000000"], ["year", "2022"], ["semester", "Fall"], ["created_at", "2020-11-09 04:13:35.346391"], ["updated_at", "2020-11-09 04:13:35.346391"]]
+  [1m[36m (91.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 96ms (ActiveRecord: 92.5ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-09 04:13:35 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?ratings%5B2021%5D=1&ratings%5B2022%5D=1&ratings%5B2023%5D=1&ratings%5B2024%5D=1&ratings%5B2025%5D=1&sort=last" for 154.21.21.126 at 2020-11-09 04:13:37 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"ratings"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "sort"=>"last"}
+Redirected to https://nevada-winter-3000.codio.io/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:13:37 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC[0m
+  Rendered students/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?ratings%5B2021%5D=1&ratings%5B2022%5D=1&ratings%5B2023%5D=1&ratings%5B2024%5D=1&ratings%5B2025%5D=1&sort=first" for 154.21.21.126 at 2020-11-09 04:13:40 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"ratings"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "sort"=>"first"}
+Redirected to https://nevada-winter-3000.codio.io/students?sort=first&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=first&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:13:40 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."first" ASC
+  Rendered students/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?ratings%5B2021%5D=1&ratings%5B2022%5D=1&ratings%5B2023%5D=1&ratings%5B2024%5D=1&ratings%5B2025%5D=1&sort=last" for 154.21.21.126 at 2020-11-09 04:13:41 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"ratings"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "sort"=>"last"}
+Redirected to https://nevada-winter-3000.codio.io/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:13:41 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC[0m
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.126 at 2020-11-09 04:15:57 +0000
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC[0m
+  Rendered students/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 154.21.21.126 at 2020-11-09 04:16:19 +0000
+
+
+Started GET "/students/new" for 154.21.21.126 at 2020-11-09 04:16:21 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 154.21.21.126 at 2020-11-09 04:16:37 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QL7oMiC9Xza0BUV77mcYWn6qQlvBPY86nPP13H3NrdBiodT+A0vGDQqiZs6Y++0yoc0p0JShaYB03KnXQzdayw==", "first"=>"cock", "last"=>"meat", "CWID"=>"2345678", "DOB"=>"2019-10-07", "advisor"=>"dfghjk", "year"=>"45678", "semester"=>"45678", "lastMeet"=>"2019-10-07", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "cock"], ["last", "meat"], ["CWID", "2345678"], ["DOB", "2019-10-07 00:00:00.000000"], ["advisor", "dfghjk"], ["year", "45678"], ["semester", "45678"], ["lastMeet", "2019-10-07 00:00:00.000000"], ["created_at", "2020-11-09 04:16:37.599458"], ["updated_at", "2020-11-09 04:16:37.599458"]]
+  [1m[35m (113.8ms)[0m  commit transaction
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 117ms (ActiveRecord: 114.2ms)
+
+
+Started GET "/students" for 154.21.21.126 at 2020-11-09 04:16:37 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://nevada-winter-3000.codio.io/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:16:37 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC[0m
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?ratings%5B2021%5D=1&ratings%5B2022%5D=1&ratings%5B2023%5D=1&ratings%5B2024%5D=1&ratings%5B2025%5D=1&sort=first" for 154.21.21.126 at 2020-11-09 04:16:44 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"ratings"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "sort"=>"first"}
+Redirected to https://nevada-winter-3000.codio.io/students?sort=first&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=first&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:16:44 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"first", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."first" ASC
+  Rendered students/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?ratings%5B2021%5D=1&ratings%5B2022%5D=1&ratings%5B2023%5D=1&ratings%5B2024%5D=1&ratings%5B2025%5D=1&sort=last" for 154.21.21.126 at 2020-11-09 04:16:49 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"ratings"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}, "sort"=>"last"}
+Redirected to https://nevada-winter-3000.codio.io/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:16:50 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC[0m
+  Rendered students/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for 154.21.21.126 at 2020-11-09 04:16:54 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-09 04:16:59 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for 98.122.43.140 at 2020-11-09 04:17:04 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 154.21.21.126 at 2020-11-09 04:17:26 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q3WFnVYETfT7Yz1hKjPW29oWwH0g8krN2MeRtz2dg/yJarlRdfLUz0XEHtRcryOzBXGr9nVurHcw6M28A2d05w==", "first"=>"mike", "last"=>"ock", "CWID"=>"10672819", "DOB"=>"1999-12-04", "advisor"=>"Dr. VERDICHE", "year"=>"2021", "semester"=>"Spring", "lastMeet"=>"2006-10-07", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "mike"], ["last", "ock"], ["CWID", "10672819"], ["DOB", "1999-12-04 00:00:00.000000"], ["advisor", "Dr. VERDICHE"], ["year", "2021"], ["semester", "Spring"], ["lastMeet", "2006-10-07 00:00:00.000000"], ["created_at", "2020-11-09 04:17:26.692315"], ["updated_at", "2020-11-09 04:17:26.692315"]]
+  [1m[36m (152.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 155ms (ActiveRecord: 152.5ms)
+
+
+Started GET "/students" for 154.21.21.126 at 2020-11-09 04:17:26 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://nevada-winter-3000.codio.io/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?sort=last&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&years%5B2025%5D=1" for 154.21.21.126 at 2020-11-09 04:17:27 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"sort"=>"last", "years"=>{"2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1", "2025"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')  ORDER BY "students"."last" ASC
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-09 04:17:56 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lY0TH7KAz4hUmlqQXzYXTpLNCrhoI5g68WSBnUzsoxOuTbsnsgkLwSlZpf8Dpq9TbGEA18NQSO3ty6RuX647ag==", "first"=>"harry", "last"=>"Sparrywhack", "CWID"=>"192738282", "DOB"=>"1900-07-06", "advisor"=>"Dr. Bigglesworth", "year"=>"2023", "semester"=>"Fall", "lastMeet"=>"2023-10-08", "commit"=>"add"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first", "harry"], ["last", "Sparrywhack"], ["CWID", "192738282"], ["DOB", "1900-07-06 00:00:00.000000"], ["advisor", "Dr. Bigglesworth"], ["year", "2023"], ["semester", "Fall"], ["lastMeet", "2023-10-08 00:00:00.000000"], ["created_at", "2020-11-09 04:17:56.312244"], ["updated_at", "2020-11-09 04:17:56.312244"]]
+  [1m[36m (90.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://nevada-winter-3000.codio.io/students
+Completed 302 Found in 93ms (ActiveRecord: 91.0ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-09 04:17:56 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
