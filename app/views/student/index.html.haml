@@ -14,22 +14,24 @@
       %th Last Meeting
   %tbody
     %tr
-      %td= link_to "#{student.last_name}", student_path(student)
-      %td= student.first_name
-      %td= student.graduation_year
-      %td= student.cwid
-      %td= student.academic_advisor
-      %td= student.last_meeting
+      %td= student.last
+      %td= student.first
+      %td= student.year
+      %td= student.CWID
+      %td= student.advisor
+      %td= student.lastMeet
 
 %h2 Note View
 
-- @meetings.each do |meeting|
-  %table#meetings.table.table-striped.col-md-12
-    %thead
-      %tr
-        %th Date
-        %th Notes
+%table#meetings.table.table-striped.col-md-12
+  %thead
+    %tr
+      %th Date
+      %th Note Tacker
+      %th Notes
+  - @meetings.each do |meeting|
     %tbody
       %tr      
         %td= meeting.date
+        %td= meeting.noteTacker
         %td= meeting.notes
