@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :students, only: [:new, :create, :index]
+  resources :students, only: [:new, :create, :index, :show]
     
     
   root 'home#index'
@@ -17,14 +17,11 @@ Rails.application.routes.draw do
     
   #get 'students/new'
     
-  get 'student/index'
-    
     
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
   #get 'addnew', to: 'students#new', as: 'addnew'
   #get 'students', to: 'students#index', as: 'students'
-  get 'student', to: 'student#index', as: 'student'
   
 end

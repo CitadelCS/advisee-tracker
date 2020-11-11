@@ -1,0 +1,22 @@
+%h2 Student View
+
+%table#students.table.table-striped.col-md-12
+  %thead
+    %tr
+      %th Last Name
+      %th First Name
+      %th Graduation Year
+      %th CWID
+      %th Academid Advisor
+      %th Last Meeting
+  %tbody
+    %tr
+      %td= @student.last
+      %td= @student.first
+      %td= @student.year
+      %td= @student.CWID
+      %td= @student.advisor
+      %td= @student.lastMeet
+
+-#= link_to 'Add New Meeting', new_meeting_path
+-# Add a table for the students meetings below
