@@ -24,7 +24,7 @@ module NavigationHelpers
         
     when /^the sign up page$/ then '/signup'
         
-    when /^the main page$/ then '/students/index'
+    when /^the main page$/ then '/students'
         
     when /^add new student page$/ then '/addnew' 
         

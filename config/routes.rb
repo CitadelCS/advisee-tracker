@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :students, only: [:new, :create, :index, :show]
+  resources :students, only: [:new, :create, :index, :show, :destroy]
     
     
   root 'home#index'
