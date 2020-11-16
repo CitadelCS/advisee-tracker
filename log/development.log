@@ -13626,3 +13626,62 @@ Processing by StudentsController#index as HTML
   [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2021', '2022', '2023', '2024', '2025')
   Rendered students/index.html.haml within layouts/application (71.2ms)
 Completed 200 OK in 103ms (Views: 102.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 69.153.28.152 at 2020-11-16 14:31:41 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 181ms (Views: 180.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/assets/scaffolds.self-471579eb251606c7dab7427eb48034a497999eb4361f00eaa6470a6f0dea8b63.css?body=1" for 69.153.28.152 at 2020-11-16 14:31:42 +0000
+
+
+Started GET "/login" for 69.153.28.152 at 2020-11-16 14:31:44 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 69.153.28.152 at 2020-11-16 14:31:45 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yGb0uniHc9MTfRguTHLzrvMEtHxvtpqxKOjBxYIFuaD+MSz9n5U65X4iIFh5EnnO5PhQyJVZgDgaVnIv8sxJsw==", "email"=>"JeffreySchuitema@outlook.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "JeffreySchuitema@outlook.com"]]
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 85ms (Views: 23.3ms | ActiveRecord: 3.3ms)

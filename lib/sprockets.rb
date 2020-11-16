@@ -1,1 +1,0 @@
-Sprockets.register_mime_type 'application/ruby', extensions: ['.rb'] 
