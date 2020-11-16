@@ -32,7 +32,7 @@ Scenario: log in
     When I fill in "email" with "JeffreySchuitema@outlook.com"
     And I fill in "password" with "password"
     And I press "Login"
-    And I wait for 1 secondsa
+    And I wait for 1 seconds
     Then I should see "Logged in"
     
 

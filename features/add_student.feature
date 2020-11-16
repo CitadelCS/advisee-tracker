@@ -31,4 +31,8 @@ Scenario: Create an student
     And I fill in "Advisor" with "Col Sanders"
     And I fill in "Graduation year" with "2020"
     And I fill in "Graduation semester" with "Fall"
+    Then I press "add" 
+    Then I am on the main page
+    And I should see "Frank"
+    And I should see "Castle"
     
