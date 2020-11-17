@@ -33,6 +33,10 @@
     <%= label_tag :Last_Advising%>
     <%= date_field_tag :lastMeet %>
   </div>
+<div class="field">
+    <%= label_tag :Meeting_Notes%>
+    <%= text_field_tag :notes %>
+  </div>
 
   <div class="actions">
     <%= submit_tag "Add Student", :class => 'btn btn-primary'%>

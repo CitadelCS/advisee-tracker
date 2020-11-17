@@ -6,6 +6,7 @@
       %th Last Name
       %th First Name
       %th Graduation Year
+      %th Graduation Semester
       %th CWID
       %th Academid Advisor
       %th Last Meeting
@@ -14,11 +15,17 @@
       %td= @student.last
       %td= @student.first
       %td= @student.year
+      %td= @student.semester
       %td= @student.CWID
       %td= @student.advisor
       %td= @student.lastMeet
-      
+    
       = button_to 'Delete', student_path(@student), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-primary'
+      = button_to 'Back to student list', students_path, :class => 'btn btn-primary'
+      = link_to 'Edit', edit_student_path(@student)
 
+%br
+%h2 Meeting Notes
+%td= @student.notes
 -#= link_to 'Add New Meeting', new_meeting_path
 -# Add a table for the students meetings below

@@ -1,7 +1,5 @@
 -#  This file is app/views/list.html.haml
-%h1 Students/Faculty
-
-%h2 Students
+%h1 Students List
 
 = form_tag students_path, :method => :get, :id => 'student' do
   = hidden_field_tag "first_name_sort", true if @first_header
@@ -17,13 +15,13 @@
 %table#students.table.table-striped.col-md-12
   %thead
     %tr
-      %th{:class => @title_header}= link_to 'First', students_path(:sort => 'first', :ratings => @selected_years), :id => 'first_header'
-      %th{:class => @date_header}= link_to 'Last', students_path(:sort => 'last', :ratings => @selected_years), :id => 'last_header'
+      %th{:class => @first_header}= link_to 'First', students_path(:sort => 'first', :ratings => @selected_years), :id => 'first_header'
+      %th{:class => @last_header}= link_to 'Last', students_path(:sort => 'last', :ratings => @selected_years), :id => 'last_header'
       %th CWID
       %th{:class => @advisor_header}= link_to 'Advisor', students_path(:sort => 'advisor', :ratings => @selected_years), :id => 'advisor_header'
       %th Graduation Year
       %th Graduation Semester
-      %th Date Last Advised
+      %th{:class => @lastMeet_header}= link_to 'Date Last Advised', students_path(:sort => 'lastMeet', :ratings => @selected_years), :id => 'lastMeet_header'
       %th More Info
   %tbody
     - @students.each do |student|
@@ -38,3 +36,5 @@
         %td= link_to "More about #{student.last}", student_path(student)
 
 = link_to 'Add New Student', new_student_path
+%br
+= link_to 'Go Back', root_path
