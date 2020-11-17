@@ -2,19 +2,14 @@ Rails.application.routes.draw do
     
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :students, only: [:new, :create, :index, :show, :destroy]
+  resources :students #, only: [:new, :create, :index, :show, :destroy, :edit, :put]
     
     
   root 'home#index'
-
   get 'sessions/new'
-
   get 'sessions/create'
-
   get 'sessions/destroy'
-    
   get 'students/index'
-    
   #get 'students/new'
     
     

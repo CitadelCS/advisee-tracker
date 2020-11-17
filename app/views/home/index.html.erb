@@ -1,3 +1,7 @@
+<h1 class="u-text u-text-default u-title u-block-0ba8-5" style="text-align: center;" contenteditable="true" data-block="79" data-block-type="Text" data-block-selected="true" data-editable-id="b027">Department of&nbsp; Cyber and Computer Sciences</h1><br/>
+<h2 style="text-align: center;">Advisee Tracker</h2>
+
+<p>
 <% if current_user %>
   Logged in as <%= current_user.email %>.
   <%= link_to "Log Out", logout_path %>
@@ -5,11 +9,15 @@
   <%= link_to "Sign Up", signup_path %> or 
   <%= link_to "Log In", login_path %>
 <% end %>
-
-
-<h1 class="u-text u-text-default u-title u-block-0ba8-5" style="text-align: center;" contenteditable="true" data-block="79" data-block-type="Text" data-block-selected="true" data-editable-id="b027">Department of&nbsp; Cyber and Computer Sciences-<br />Advisee Tracker</h1>
-
+</p>
+    
 <% if current_user %>
+<p>
+<%= link_to 'Users List', users_path %>
+</p>
+<p>
+<%= link_to 'Student List', students_path %>
+</p>
 <% else %>
     <p style="font-size: 1.5em; text-align: center;">Please log in to continue</p>
 <% end %>

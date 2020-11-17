@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
     
   def student_params
-     params.permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet)
+     params.permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet, :notes)
   end
  
   def show
@@ -20,6 +20,10 @@ class StudentsController < ApplicationController
       ordering,@first_header = {:first => :asc}, 'bg-warning hilite'
     when 'last'
       ordering,@last_header = {:last => :asc}, 'bg-warning hilite'
+    when 'advisor'
+      ordering,@advisor_header = {:advisor => :asc}, 'bg-warning hilite'
+    when 'lastMeet'
+      ordering,@lastMeet_header = {:lastMeet => :asc}, 'bg-warning hilite'
     end
     @all_years = Student.all_years
     @selected_years = params[:years] || session[:years] || {}
@@ -36,8 +40,6 @@ class StudentsController < ApplicationController
     @students = Student.where(year: @selected_years.keys).order(ordering)
   end
 
-
-
   def edit
      @student = Student.find params[:id]
   end
@@ -45,7 +47,7 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find params[:id]
     @student.update_attributes!(student_params)
-    flash[:notice] = "#{@student.last} was successfully updated."
+    flash[:notice] = "#{@student.first} #{@student.last} was successfully updated."
     redirect_to students_path(@student)
   end  
 
@@ -56,14 +58,12 @@ class StudentsController < ApplicationController
     redirect_to students_path
   end   
     
-    
   def new
     # default: render 'addnew' template
   end
     
   def create
     @student = Student.create!(student_params)
-    
     redirect_to students_path
   end
 end
