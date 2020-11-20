@@ -1,16 +1,6 @@
 -# edit.html.haml using partial
 
-%h2 Edit Student Notes
 
-= form_tag student_path(@student), :method => :put do
-
-  = label :student, :notes, 'Notes'
-  = text_area :student, 'notes'
-  %br
-
-  = submit_tag 'Update Student Notes', :class => 'btn btn-primary'
-
-%br
 %h2 Edit Existing Student
 
 = form_tag student_path(@student), :method => :put do
@@ -32,14 +22,18 @@
   %br
 
   = label :student, :year, 'Year'
-  = select :student, :year, ['2020', '2021', '2022', '2023', '2024']
+  = select :student, :year, ['2020', '2021', '2022', '2023', '2024', '2025']
 
   = label :student, :semester, 'Semester'
-  = select :student, :semester, ['Spring', 'Fall']
+  = select :student, :semester, ['Spring', 'Summer', 'Fall']
   %br
   
   = label :student, :lastMeet, 'Last Advised Date'
   = date_select :student, 'lastMeet'
+  %br
+
+  = label :student, :notes, 'Notes'
+  = text_field :student, 'notes'
   %br
 
   = submit_tag 'Update Student Info', :class => 'btn btn-primary'

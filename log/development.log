@@ -5259,3 +5259,664 @@ Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
   [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 98.122.43.140 at 2020-11-20 14:44:10 +0000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 174ms (Views: 174.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/scaffolds.self-471579eb251606c7dab7427eb48034a497999eb4361f00eaa6470a6f0dea8b63.css?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/students.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/students.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 98.122.43.140 at 2020-11-20 14:44:11 +0000
+
+
+Started GET "/login" for 98.122.43.140 at 2020-11-20 14:44:13 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 98.122.43.140 at 2020-11-20 14:44:16 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f+akDt+YDqOOgiyEao5ZVR9y7TRclChMuD/oWKQMQ6JlyzJjPi4pl6wEZdFVAWEfqBMoZKMgXF9H1JB4VEyCDw==", "email"=>"rskibick@citadel.edu", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "rskibick@citadel.edu"]]
+Redirected to https://field-basil-3000.codio.io/students
+Completed 302 Found in 120ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 14:44:17 +0000
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:44:25 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/8/edit" for 98.122.43.140 at 2020-11-20 14:44:31 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered students/edit.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/8" for 98.122.43.140 at 2020-11-20 14:44:42 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"beRvkMgH1ypP9voK3H2jxKzM9Rjaz5PhXL7ZSq7nm2R3yfn9KbHwHm1ws1/j8puOG60wSCV75/KjVaFqXqdayQ==", "student"=>{"first"=>"Ryan", "last"=>"Arnold", "CWID"=>"11183184", "advisor"=>"Dr. V", "year"=>"2021", "semester"=>"Spring", "lastMeet(1i)"=>"2022", "lastMeet(2i)"=>"10", "lastMeet(3i)"=>"30"}, "commit"=>"Update Student Info", "id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.8
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.8" for 98.122.43.140 at 2020-11-20 14:44:42 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:44:46 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/8/edit" for 98.122.43.140 at 2020-11-20 14:45:05 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered students/edit.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/8" for 98.122.43.140 at 2020-11-20 14:45:09 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wGoBHPpDmYhdCJxQZFXbyheNXWDRX0NC/wxhBVS5YyfaR5dxG/W+vH+O1QVb2uOAoOyYMC7rN1EA5xklpPmiig==", "student"=>{"notes"=>",nn"}, "commit"=>"Update Student Notes", "id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.8
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.8" for 98.122.43.140 at 2020-11-20 14:45:10 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:45:13 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:46:12 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    30: %table#students.table.table-striped.col-md-12
+    31:   %thead
+    32:     %tbody
+    33:         %tr
+    34:             %td= @student.notes
+    35: -#= link_to 'Add New Meeting', new_meeting_path
+    36: -# Add a table for the students meetings below
+  app/views/students/show.html.haml:33
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:46:34 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/8/edit" for 98.122.43.140 at 2020-11-20 14:46:36 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered students/edit.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/8" for 98.122.43.140 at 2020-11-20 14:46:39 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mCdnWuAGHCF+yBarbMZXohy4lZvuH2knxrsEtktHSAGCCvE3AbA7FVxOX/5TSW/oq9lQyxGrHTQ5UHyWuweJrA==", "student"=>{"notes"=>"dvsdgsdsdg"}, "commit"=>"Update Student Notes", "id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.8
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.8" for 98.122.43.140 at 2020-11-20 14:46:40 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:46:42 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/8/edit" for 98.122.43.140 at 2020-11-20 14:46:50 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered students/edit.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/8" for 98.122.43.140 at 2020-11-20 14:46:56 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"laIlanU1A7KitY+Gj9KtaQjsBGY29HRQKk7eOKm7cJePj7MHlIMkhoAzxtOwXZUjv43BNslAAEPVpaYYWfuxOg==", "student"=>{"first"=>"Ryan", "last"=>"Arnold", "CWID"=>"11183184", "advisor"=>"Dr. V", "year"=>"2021", "semester"=>"Spring", "lastMeet(1i)"=>"2022", "lastMeet(2i)"=>"10", "lastMeet(3i)"=>"30"}, "commit"=>"Update Student Info", "id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.8
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.8" for 98.122.43.140 at 2020-11-20 14:46:57 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/8" for 98.122.43.140 at 2020-11-20 14:47:00 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-20 14:54:28 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"qbXK5c5uf5tD/hDvkz8Y7G/5rHuPiXURFRQ/V9mker6zmFyIL9hYr2F4WbqssCCm2JhpK3A9AQLq/0d3KeS7Ew=="}
+Unpermitted parameter: authenticity_token
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-11-20 14:54:28.232023"], ["updated_at", "2020-11-20 14:54:28.232023"]]
+  [1m[35m (86.4ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students
+Completed 302 Found in 89ms (ActiveRecord: 86.9ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 14:54:28 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for 98.122.43.140 at 2020-11-20 14:54:32 +0000
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-20 14:55:22 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EsWT6GgKsfOuUJd8RR4/yOQpDDNE8A1+C/qJlTASenAI6AWFibyWx4zW3il6kQeCU0jJY7tEeW30EfG1wFK73Q==", "first"=>"Henry", "last"=>"ImportantMan", "CWID"=>"10293848", "DOB"=>"1999-07-24", "advisor"=>"Dr. Bigglesworth", "year"=>"2023", "semester"=>"Spring", "lastMeet"=>"2020-11-17", "notes"=>"", "commit"=>"Add Student"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "students" ("first", "last", "CWID", "DOB", "advisor", "year", "semester", "lastMeet", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Henry"], ["last", "ImportantMan"], ["CWID", "10293848"], ["DOB", "1999-07-24 00:00:00.000000"], ["advisor", "Dr. Bigglesworth"], ["year", "2023"], ["semester", "Spring"], ["lastMeet", "2020-11-17 00:00:00.000000"], ["notes", ""], ["created_at", "2020-11-20 14:55:22.551323"], ["updated_at", "2020-11-20 14:55:22.551323"]]
+  [1m[35m (94.1ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students
+Completed 302 Found in 97ms (ActiveRecord: 94.5ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 14:55:22 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/48" for 98.122.43.140 at 2020-11-20 14:55:26 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 48]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/48/edit" for 98.122.43.140 at 2020-11-20 14:55:29 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 48]]
+  Rendered students/edit.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/48" for 98.122.43.140 at 2020-11-20 14:55:35 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ysMtU8odrHqIofHswF2c1Hqmzq0irmKoL2oI2GnH5crQ7rs+K6uLTqonuLn/0qSezccL/d0aFrvQgXD4mYckZw==", "student"=>{"notes"=>"hey there"}, "commit"=>"Update Student Notes", "id"=>"48"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 48]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students.48
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.48" for 98.122.43.140 at 2020-11-20 14:55:35 +0000
+Processing by StudentsController#index as 
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/48" for 98.122.43.140 at 2020-11-20 14:55:40 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 48]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 14:55:56 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 14:56:27 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46/edit" for 98.122.43.140 at 2020-11-20 14:56:30 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/edit.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/46" for 98.122.43.140 at 2020-11-20 14:56:37 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aq0YopzpD8qwuIGPU63BtlDRuZxQkk5dcfqQtedIVF0YgI7PfV8o/pI+yNpsIvn857B8zK8mOk6OEeiVFwiV8A==", "student"=>{"notes"=>"Hello world test"}, "commit"=>"Update Student Notes", "id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students.46
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.46" for 98.122.43.140 at 2020-11-20 14:56:37 +0000
+Processing by StudentsController#index as 
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 14:56:40 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:00:42 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46/edit" for 98.122.43.140 at 2020-11-20 15:00:45 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/edit.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/46" for 98.122.43.140 at 2020-11-20 15:00:50 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3TTUDHHnBVwrSFL9R6LMXAymmwSKkq3XJbyyP100wZDHGUJhkFEiaAnOG6h4LfQWu8deVHUm2cTaV8ofrXQAPQ==", "student"=>{"notes"=>"Hello world super"}, "commit"=>"Update Student Notes", "id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.46
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.46" for 98.122.43.140 at 2020-11-20 15:00:51 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:00:54 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-20 15:01:00 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"Z38alUpH6fPmPWv7I+Nsw6AMehOjENtrAbDmBeZdbAt9Uoz4q/HOx8S7Iq4cbFSJF22/Q1ykr3j+W54lFh2tpg=="}
+Unpermitted parameter: authenticity_token
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-11-20 15:01:00.226166"], ["updated_at", "2020-11-20 15:01:00.226166"]]
+  [1m[35m (90.3ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students
+Completed 302 Found in 93ms (ActiveRecord: 90.6ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 15:01:00 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:01:08 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46/edit" for 98.122.43.140 at 2020-11-20 15:01:11 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/edit.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/46" for 98.122.43.140 at 2020-11-20 15:01:20 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B1HpcZS1KCD74w1LilYD/6HxJDmCtQWHdQSmXygysDcdfH8cdQMPFNllRB612Tu1FpDhaX0BcZSK795/2HJxmg==", "student"=>{"first"=>"Geno", "last"=>"Paluso", "CWID"=>"123456789", "advisor"=>"Dr. V", "year"=>"2020", "semester"=>"Spring", "lastMeet(1i)"=>"2020", "lastMeet(2i)"=>"11", "lastMeet(3i)"=>"1"}, "commit"=>"Update Student Info", "id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students.46
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.46" for 98.122.43.140 at 2020-11-20 15:01:20 +0000
+Processing by StudentsController#index as 
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:01:24 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:03:31 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46/edit" for 98.122.43.140 at 2020-11-20 15:03:34 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/edit.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/46" for 98.122.43.140 at 2020-11-20 15:03:39 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UNze+ftQVcOJDrCO0plSwEw5weCCu3ZoyhoPl52+clxK8UiUGuZy96uI+dvtFmqK+1gEsH0PAns18Xe3bf6z8Q==", "student"=>{"first"=>"Geno", "last"=>"Paluso", "CWID"=>"123456789", "advisor"=>"Dr. V", "year"=>"2020", "semester"=>"Spring", "lastMeet(1i)"=>"2020", "lastMeet(2i)"=>"11", "lastMeet(3i)"=>"1", "notes"=>"Hello world bucko"}, "commit"=>"Update Student Info", "id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.46
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.46" for 98.122.43.140 at 2020-11-20 15:03:39 +0000
+Processing by StudentsController#index as 
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:03:42 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-20 15:03:45 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"voblZtz5tmmKsBWtqCEtIHak2q6zhy7vq/jqWgoDsPKkq3MLPU+RXag2XPiXrhVqwcUf/kwzWvxUE5J6+kNxXw=="}
+Unpermitted parameter: authenticity_token
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-11-20 15:03:45.744425"], ["updated_at", "2020-11-20 15:03:45.744425"]]
+  [1m[35m (96.3ms)[0m  commit transaction
+Redirected to https://field-basil-3000.codio.io/students
+Completed 302 Found in 98ms (ActiveRecord: 96.6ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 15:03:45 +0000
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')[0m
+  Rendered students/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?utf8=%E2%9C%93&years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1&commit=Refresh" for 98.122.43.140 at 2020-11-20 15:03:53 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"utf8"=>"✓", "years"=>{"2020"=>"1", "2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1"}, "commit"=>"Refresh"}
+Redirected to https://field-basil-3000.codio.io/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1" for 98.122.43.140 at 2020-11-20 15:03:53 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2020"=>"1", "2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1"}}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:07:34 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/46/edit" for 98.122.43.140 at 2020-11-20 15:07:36 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"46"}
+  [1m[35mStudent Load (0.1ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 46]]
+  Rendered students/edit.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/students/46" for 98.122.43.140 at 2020-11-20 15:07:43 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WULQUfwLXsl5/sD1PnJUNcI+2r0bKQcFswX49D8z1udDb0Y8Hb15/Vt4iaAB/Wx/dV8f7eSdcxZM7oDUz3MXSg==", "student"=>{"first"=>"Geno", "last"=>"Paluso", "CWID"=>"123456789", "advisor"=>"Dr. V", "year"=>"2020", "semester"=>"Spring", "lastMeet(1i)"=>"2020", "lastMeet(2i)"=>"11", "lastMeet(3i)"=>"1", "notes"=>"super awesome pants"}, "commit"=>"Update Student Info", "id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+Unpermitted parameters: utf8, _method, authenticity_token, student, commit, id
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students.46
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/students.46" for 98.122.43.140 at 2020-11-20 15:07:43 +0000
+Processing by StudentsController#index as 
+Redirected to https://field-basil-3000.codio.io/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1" for 98.122.43.140 at 2020-11-20 15:07:44 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2020"=>"1", "2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1"}}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/46" for 98.122.43.140 at 2020-11-20 15:07:47 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"46"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 46]]
+  Rendered students/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/students" for 98.122.43.140 at 2020-11-20 15:22:29 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"ardaHq6pJ5D5+RjpEpusnhkb5RlTPpg9gojVowMspzZwmsxzTx8ApNt/UbwtFJTUrnogSayK7C59Y62D82xmmw=="}
+Unpermitted parameter: authenticity_token
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "students" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2020-11-20 15:22:30.129396"], ["updated_at", "2020-11-20 15:22:30.129396"]]
+  [1m[36m (96.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://field-basil-3000.codio.io/students
+Completed 302 Found in 136ms (ActiveRecord: 97.9ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 15:22:30 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://field-basil-3000.codio.io/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1" for 98.122.43.140 at 2020-11-20 15:22:30 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2020"=>"1", "2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1"}}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 196ms (Views: 192.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 98.122.43.140 at 2020-11-20 15:22:34 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 98.122.43.140 at 2020-11-20 15:29:47 +0000
+Processing by StudentsController#index as HTML
+Redirected to https://field-basil-3000.codio.io/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students?years%5B2020%5D=1&years%5B2021%5D=1&years%5B2022%5D=1&years%5B2023%5D=1&years%5B2024%5D=1" for 98.122.43.140 at 2020-11-20 15:29:47 +0000
+Processing by StudentsController#index as HTML
+  Parameters: {"years"=>{"2020"=>"1", "2021"=>"1", "2022"=>"1", "2023"=>"1", "2024"=>"1"}}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT "students".* FROM "students" WHERE "students"."year" IN ('2020', '2021', '2022', '2023', '2024')
+  Rendered students/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 32ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 98.122.43.140 at 2020-11-20 15:50:23 +0000
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.1ms)

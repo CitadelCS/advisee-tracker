@@ -13,7 +13,7 @@ Feature:  Log in/ Log out functionality
     
 Scenario: View the log in screen
     Given I am on the advisee-tracker home page
-    Then I should see "Department of  Cyber and Computer Sciences-Advisee Tracker"
+    Then I should see "Department of  Cyber and Computer Sciences"
     Then I should see "Please log in to continue"
 
 Scenario: Create an account
@@ -29,7 +29,7 @@ Scenario: log in
     Then I should be on the login page
     Then I should see "Email" 
     Then I should see "Password"
-    When I fill in "email" with "JeffreySchuitema@outlook.com"
+    When I fill in "email" with "rskibick@citadel.edu"
     And I fill in "password" with "password"
     And I press "Login"
     And I wait for 1 seconds

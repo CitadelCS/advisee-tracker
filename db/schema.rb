@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20201117021959) do
 
+  create_table "faculty", force: :cascade do |t|
+    t.string   "first"
+    t.string   "last"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "students", force: :cascade do |t|
     t.string   "first"
