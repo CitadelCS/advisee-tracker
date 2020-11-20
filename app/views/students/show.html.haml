@@ -19,6 +19,7 @@
       %td= @student.CWID
       %td= @student.advisor
       %td= @student.lastMeet
+      
     
       = button_to 'Delete', student_path(@student), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-primary'
       = button_to 'Back to student list', students_path, :class => 'btn btn-primary'
@@ -26,6 +27,10 @@
 
 %br
 %h2 Meeting Notes
-%td= @student.notes
+%table#students.table.table-striped.col-md-12
+  %thead
+    %tbody
+      %tr
+        %td= @student.notes
 -#= link_to 'Add New Meeting', new_meeting_path
 -# Add a table for the students meetings below

@@ -26,14 +26,14 @@ Background: students in database
     
     
 Scenario: View the add student page
-    Then I should see "Students/Faculty"
+    Then I should see "Students List"
     And I follow "Add New Student"
     Then I should see "Add New Student"
     And I should see "First name"
     
     
 Scenario: Create an student
-    Then I should see "Students/Faculty"
+    Then I should see "Students List"
     And I follow "Add New Student"
     Then I should see "Add New Student"
     And I fill in "first" with "Frank"
