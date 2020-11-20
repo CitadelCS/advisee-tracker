@@ -2,11 +2,11 @@ source 'https://rubygems.org'
 
 ruby '>= 2.4.0', '< 3.0'
 gem 'rails', '4.2.10'
-
+gem 'pg', '~> 0.21'
+gem 'rails_12factor'
+gem 'bcrypt',               '3.1.7'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'sqlite3', '1.3.11'
-    gem 'bcrypt',               '3.1.7'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'

@@ -5920,3 +5920,23 @@ Processing by HomeController#index as HTML
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered home/index.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (85.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (56.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to NewDb (20201106170151)
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/codio/workspace/advisee-tracker/db/migrate/20201106170151_new_db.rb:14)
+  [1m[36m (56.0ms)[0m  [1mCREATE TABLE "students" ("id" serial primary key, "first" character varying, "last" character varying, "CWID" character varying, "DOB" timestamp, "advisor" character varying, "year" character varying, "semester" character varying, "lastMeet" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/codio/workspace/advisee-tracker/db/migrate/20201106170151_new_db.rb:24)
+  [1m[35m (55.5ms)[0m  CREATE TABLE "meetings" ("id" serial primary key, "student" character varying, "date" character varying, "note_tacker" character varying, "note" character varying, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20201106170151"]]
+  [1m[35m (42.8ms)[0m  COMMIT
+Migrating to UerS (20201106171016)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (68.6ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20201106171016"]]
+  [1m[35m (110.0ms)[0m  COMMIT
+Migrating to RemoveNotesFromStudents (20201117021933)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "students" DROP "notes"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

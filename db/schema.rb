@@ -13,10 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20201117021959) do
 
-  create_table "faculty", force: :cascade do |t|
-    t.string   "first"
-    t.string   "last"
-    t.string   "title"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "meetings", force: :cascade do |t|
+    t.string   "student"
+    t.string   "date"
+    t.string   "note_tacker"
+    t.string   "note"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
