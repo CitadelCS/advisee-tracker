@@ -12,15 +12,8 @@ class NewDb < ActiveRecord::Migration
       # Add fields that let Rails automatically keep track
       # of when students are added or modified:
       t.timestamps
-    end
-      create_table :faculty do |t|
-      t.string 'first'
-      t.string 'last'
-      t.string 'title'
-      # Add fields that let Rails automatically keep track
-      # of when students are added or modified:
-      t.timestamps
-    end 
+      end 
+
       create_table :meetings do |t|
       t.string 'student'
       t.spring 'date'
@@ -29,5 +22,6 @@ class NewDb < ActiveRecord::Migration
       # Add fields that let Rails automatically keep track
       # of when students are added or modified:
       t.timestamps
-  end
+      end
+  end 
 end
