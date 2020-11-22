@@ -20,10 +20,6 @@ class StudentsController < ApplicationController
       ordering,@first_header = {:first => :asc}, 'bg-warning hilite'
     when 'last'
       ordering,@last_header = {:last => :asc}, 'bg-warning hilite'
-    when 'advisor'
-      ordering,@advisor_header = {:advisor => :asc}, 'bg-warning hilite'
-    when 'lastMeet'
-      ordering,@lastMeet_header = {:lastMeet => :asc}, 'bg-warning hilite'
     end
     @all_years = Student.all_years
     @selected_years = params[:years] || session[:years] || {}
