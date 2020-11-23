@@ -24,6 +24,59 @@ require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
 
+Given /^a valid user$/ do
+  @user = User.create!({
+             :email => "test1@test.com",
+             :password => "password",
+             :password_confirmation => "password"
+           })
+end
+
+Given /^a logged in user$/ do
+  Given "a valid user"
+  visit signin_url
+  fill_in "Email", :with => "test1@test.com"
+  fill_in "password", :with => "password"
+  click_button "Sign in"
+end
+
+Then("I should not be logged in") do
+  @session = nil
+end
+
+When /^I sign in$/ do
+  visit "/login"
+  fill_in "Email", :with => "test1@test.com"
+  fill_in "password", :with => "password"
+  click_button "Login"
+end
+
+Given /^I am logged in$/ do
+    @user != nil
+    @current_user = "test1@test.com"
+end
+
+Given /^I am logged in as "(.*)"$/ do |email|
+  visit("/login")
+  fill_in("Email", :with => email)
+  fill_in("password", :with => "password")
+  click_button("Login")
+end
+
+#Given /I am logged in/ do |users|
+    #User.create("test1@test.com", "password")
+#end
+
+Then("I should have created a new session") do
+  @user != nil
+end
+
+Then("I am the current user") do
+  @current_user = @user
+  @session != nil
+  @current_user = "test1@test.com"
+end
+
 module WithinHelpers
   def with_scope(locator)
     locator ? within(*selector_for(locator)) { yield } : yield
@@ -55,6 +108,12 @@ Given /the following students exist/ do |students_table|
   end
 end
 
+Given /the following users exist/ do |users_table|
+  users_table.hashes.each do |user|
+    User.create user
+  end
+end
+
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
@@ -65,6 +124,15 @@ end
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
+
+Given /the following userss exist/ do |users|
+  movies_table.hashes.each do |user|
+    User.create user
+  end
+end
+
+
+
 
 Given /^I wait for (\d+) seconds?$/ do |n|
   sleep(n.to_i)

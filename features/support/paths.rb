@@ -22,6 +22,10 @@ module NavigationHelpers
         
     when /^the login page$/ then '/login'
         
+    when /^the user page$/ then '/users'
+    
+    when /^the user create page$/ then '/users' 
+        
     when /^the sign up page$/ then '/signup'
         
     when /^the main page$/ then '/students'
