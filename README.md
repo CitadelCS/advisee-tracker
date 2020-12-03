@@ -23,9 +23,9 @@ https://www.pivotaltracker.com/n/projects/2471805
   
   b.	sudo apt-get install libpq-dev
   
-  c. ***BEFORE STEP 4***
+  c. ***BEFORE STEP 7***
   
-      i.	 for Step 4 I needed to sudo gem install rails -v 4.2.10 
+      i.	 for Step 7 I needed to sudo gem install rails -v 4.2.10 
       
       ii.	Then  gem install pg -v '0.21.0' . 
       
