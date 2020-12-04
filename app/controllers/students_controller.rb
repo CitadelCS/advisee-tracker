@@ -1,9 +1,9 @@
 class StudentsController < ApplicationController
     
   def student_params
-     params.permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet, :notes)
+     params.require(:student).permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet, :notes)
   end
- 
+    
   def show
      id = params[:id]
      @student = Student.find(id)
@@ -44,7 +44,7 @@ class StudentsController < ApplicationController
     @student = Student.find params[:id]
     @student.update_attributes!(student_params)
     flash[:notice] = "#{@student.first} #{@student.last} was successfully updated."
-    redirect_to students_path(@student)
+    redirect_to student_path(@student)
   end  
 
   def destroy
@@ -58,8 +58,12 @@ class StudentsController < ApplicationController
     # default: render 'addnew' template
   end
     
+   def student_params_new
+     params.permit(:first, :last, :CWID, :DOB, :advisor, :year, :semester, :lastMeet, :notes)
+  end   
+    
   def create
-    @student = Student.create!(student_params)
+    @student = Student.create!(student_params_new)
     redirect_to students_path
   end
 end
