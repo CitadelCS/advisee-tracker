@@ -2,7 +2,8 @@ Rails.application.routes.draw do
     
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :students #, only: [:new, :create, :index, :show, :destroy, :edit, :put]
+  resources :students
+
     
     
   root 'home#index'
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   get 'students/index'
-  #get 'students/new'
+ # get 'students/new'
     
     
   get 'signup', to: 'users#new', as: 'signup'

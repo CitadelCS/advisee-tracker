@@ -13,7 +13,7 @@ Scenario: View the log in screen
   
 Scenario: Login
   Given a valid user
-  And I am on the advisee-tracker home page
+  And I am on the advisee-tracker home page 
   When I sign in
   Then I should see "Logged in"
  

@@ -1,6 +1,5 @@
 -# edit.html.haml using partial
 
-
 %h2 Edit Existing Student
 
 = form_tag student_path(@student), :method => :put do
@@ -13,7 +12,7 @@
   = text_field :student, 'last'
   %br
   
-  = label :student, :cwid, 'CWID'
+  = label :student, :CWID, 'CWID'
   = text_field :student, 'CWID'
   %br
   
@@ -33,7 +32,8 @@
   %br
 
   = label :student, :notes, 'Notes'
-  = text_field :student, 'notes'
+  %br
+  = text_area :student, 'notes'
   %br
 
   = submit_tag 'Update Student Info', :class => 'btn btn-primary'
