@@ -4,8 +4,8 @@
 
 <a href="https://codeclimate.com/github/CitadelCS/advisee-tracker/test_coverage"><img src="https://api.codeclimate.com/v1/badges/7aa4007c770db57f0b99/test_coverage" /></a>
 
-**Current Code Coverage**
-Coverage report generated for Cucumber Features to /home/codio/workspace/advisee-tracker/coverage. **93 / 94 LOC (98.94%) covered.**
+**Current Code Coverage:**
+  Coverage report generated for Cucumber Features to /home/codio/workspace/advisee-tracker/coverage. **95 / 96 LOC (98.96%) covered.**
 
 **Heroku App Link**
 https://infinite-wildwood-67198.herokuapp.com/
