@@ -1,3 +1,5 @@
+This application is designed to be a functional database that displays students with base information for faculty members to see.  The purpose is for faculty members to be able to see when their advisees have last been advised and if they need to be advised before the next round of class scheduling.  You need to create an account with a valid email and log in. From there you can add, edit, delete, and see more detailed information on each student in the database.
+
 # advisee-tracker
 
 <a href="https://codeclimate.com/github/CitadelCS/advisee-tracker/maintainability"><img src="https://api.codeclimate.com/v1/badges/7aa4007c770db57f0b99/maintainability" /></a>
